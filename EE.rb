@@ -2944,7 +2944,7 @@ class Game_Map
     return unless event
     @events[new_id] = Game_Event.new(@map_id, event)
     @events[new_id].id = new_id
-    @events[new_id].interpreter.event_id = new_id
+    @events[new_id].interpreter.setup(@events[new_id].list, new_id)
     x ||= event.x
     y ||= event.y
     @events[new_id].moveto(x, y)
