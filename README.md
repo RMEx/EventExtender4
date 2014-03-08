@@ -57,12 +57,12 @@ Rien de plus simple, c'est un script à mettre dans `Materials`, de préférence
 
 Pour ceux qui ne savent pas encore comment mettre un script, ou qui trouvent le site "github" peu intuitif : 
 *     Rendez-vous sur : [La Page du Script](https://raw.github.com/Grimimi/EventExtender4/master/EE.rb)
-*     Copiez-collez le 
-          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
-          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
-          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/3.png?raw=true)
-          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/4.gif?raw=true)
-          
+*     Copiez-collez le   
+      ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
+      ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
+      ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/3.png?raw=true)
+      ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/4.gif?raw=true)
+
 
 
 ##Conditions d'utilisations
