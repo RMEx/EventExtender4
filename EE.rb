@@ -3330,6 +3330,12 @@ module Command
   #--------------------------------------------------------------------------
   def max_event_id; $game_map.max_id; end
   #--------------------------------------------------------------------------
+  # * Get Region ID from coords
+  #--------------------------------------------------------------------------
+  def region_id(x, y)
+    $game_map.region_id(x, y)
+  end
+  #--------------------------------------------------------------------------
   # * Get a percent
   #--------------------------------------------------------------------------
   def percent(value, max); (value*100)/max; end
@@ -4555,6 +4561,14 @@ module Command_Description
       ],
       returnable: true}
   end
+  def region_id
+    {description:"Renvoi la région défini sur les coordonnées passées en argument",
+      args:[
+         {name:"X", type: :int}, 
+         {name:"Y", type: :int}
+      ],
+      returnable: true}
+  end
   def map_id
     {description:"Renvoi l'id de la map jouée", returnable: true}
   end
@@ -4905,6 +4919,7 @@ module Command_Description
   end
   def event_direction
     {description:"Renvoi la direction (2,4,6,8) d'un évènement en fonction de son ID", 
+      args:[{name:"ID", type: :int}],
       returnable: true}
   end
   def player_x
