@@ -56,9 +56,13 @@ Concrètement (et dans les grandes lignes), l'EE offre (et de manière non exhau
 Rien de plus simple, c'est un script à mettre dans `Materials`, de préférence au dessus de tous les autres. Le lien vers le script est en bas de cette présentation. 
 
 Pour ceux qui ne savent pas encore comment mettre un script, ou qui trouvent le site "github" peu intuitif : 
-1.    Rendez-vous sur : [La Page du Script](https://raw.github.com/Grimimi/EventExtender4/master/EE.rb)
-2.    Copiez-collez le 
-      ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
+*     Rendez-vous sur : [La Page du Script](https://raw.github.com/Grimimi/EventExtender4/master/EE.rb)
+*     Copiez-collez le 
+          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
+          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/2.gif?raw=true)
+          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/3.png?raw=true)
+          ![Exemple](https://github.com/Grimimi/EventExtender4/blob/master/images/4.gif?raw=true)
+          
 
 
 ##Conditions d'utilisations

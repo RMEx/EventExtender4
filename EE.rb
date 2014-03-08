@@ -2944,6 +2944,7 @@ class Game_Map
     return unless event
     @events[new_id] = Game_Event.new(@map_id, event)
     @events[new_id].id = new_id
+    @events[new_id].interpreter.event_id = new_id
     x ||= event.x
     y ||= event.y
     @events[new_id].moveto(x, y)
@@ -3040,6 +3041,7 @@ class Game_Event
   # * Public instance variables
   #--------------------------------------------------------------------------
   attr_accessor :id
+  attr_accessor :interpreter
   #--------------------------------------------------------------------------
   # * Singleton
   #--------------------------------------------------------------------------
@@ -3130,6 +3132,10 @@ class Game_Interpreter
   alias extender_command_111 command_111
   alias extender_command_105 command_105
   alias extender_command_355 command_355 
+  #--------------------------------------------------------------------------
+  # * Access to event_id
+  #--------------------------------------------------------------------------
+  attr_accessor :event_id
   #--------------------------------------------------------------------------
   # * Singleton
   #--------------------------------------------------------------------------
