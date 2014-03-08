@@ -2929,6 +2929,12 @@ class Game_Map
     extender_initialize
   end
   #--------------------------------------------------------------------------
+  # * Return Max Event Id
+  #--------------------------------------------------------------------------
+  def max_id
+    @events.keys.max
+  end
+  #--------------------------------------------------------------------------
   # * Add event to map
   #--------------------------------------------------------------------------
   def add_event(map_id, event_id, new_id,x=nil,y=nil)
@@ -3319,6 +3325,10 @@ module Command
   # * Get the map id
   #--------------------------------------------------------------------------
   def map_id; $game_map.map_id; end
+  #--------------------------------------------------------------------------
+  # * Get the max Event ID
+  #--------------------------------------------------------------------------
+  def max_event_id; $game_map.max_id; end
   #--------------------------------------------------------------------------
   # * Get a percent
   #--------------------------------------------------------------------------
@@ -4547,6 +4557,9 @@ module Command_Description
   end
   def map_id
     {description:"Renvoi l'id de la map jouée", returnable: true}
+  end
+  def max_event_id
+    {description:"Renvoi le plus grand ID d'évènement de la carte", returnable: true}
   end
   def percent
     {description:"Renvoi le pourcentage de la valeur1 par rapport à la valeur2",
