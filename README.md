@@ -5,7 +5,7 @@ Liste des mises à jours de l'EE4 (version actuelle `4.6`)
 
 | Version N°  | Date |  Modification |
 ------------- | ------------- | ------------- |
-| `4.6` | `08.03.2013`  | Ajout de region_id, picture_opacity |
+| `4.6` | `08.03.2014`  | Ajout de region_id, picture_opacity |
 | `4.2` | `31.05.2013`  | Ajout des plages |
 | `4.1` | `07.05.2013`  | Range + ajout de touches |
 | Aucun | `12.04.2013`  | Ajout du plugin Keycombination |
