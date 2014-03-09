@@ -1,11 +1,15 @@
 #Event Extender 4 (Pour VXAce)
 
 ##Mises à jours
-Liste des mises à jours de l'EE4
+Liste des mises à jours de l'EE4 (version actuelle `4.6`)
 
 | Version N°  | Date |  Modification |
 ------------- | ------------- | ------------- |
+| `4.6` | `08.03.2013`  | Ajout de region_id, picture_opacity |
+| `4.2` | `31.05.2013`  | Ajout des plages |
+| `4.1` | `07.05.2013`  | Range + ajout de touches |
 | Aucun | `12.04.2013`  | Ajout du plugin Keycombination |
+(Cette liste est à jours mais pas spécialement vraie historiquement. L'indexation méticuleuse commence à partir de la version `4.6`)
 
 L'objectif de ce script est d'offrir une multitude de commandes complémentaires pour la création de systèmes via l'event-making. C'est pour ça que j'ai écrit ce script, dans la même veine que l'Event-language (devenu GeeX Make) de Roys et Avygeil. 
 
