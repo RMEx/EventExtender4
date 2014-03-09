@@ -3,9 +3,9 @@
 ##Mises à jours
 Liste des mises à jours de l'EE4
 
-Version N°  | Date |  Modification
-------------- | ------------- |
-Aucun | `12.04.2013`  | Ajout du plugin Keycombination
+| Version N°  | Date |  Modification |
+------------- | ------------- | ------------- |
+| Aucun | `12.04.2013`  | Ajout du plugin Keycombination |
 
 L'objectif de ce script est d'offrir une multitude de commandes complémentaires pour la création de systèmes via l'event-making. C'est pour ça que j'ai écrit ce script, dans la même veine que l'Event-language (devenu GeeX Make) de Roys et Avygeil. 
 
