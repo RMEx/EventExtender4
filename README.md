@@ -5,6 +5,7 @@ Liste des mises à jours de l'EE4 (version actuelle `4.6`)
 
 | Version N°  | Date |  Modification |
 ------------- | ------------- | ------------- |
+| `4.6.1` | `10.03.2014`  | Ajout de message_height |
 | `4.6` | `08.03.2014`  | Ajout de region_id, picture_opacity |
 | `4.2` | `31.05.2013`  | Ajout des plages |
 | `4.1` | `07.05.2013`  | Range + ajout de touches |

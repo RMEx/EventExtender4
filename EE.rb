@@ -26,7 +26,7 @@
 # TI-MAX, Playm, Kmkzy
 #==============================================================================
 
-# This version : 4.6
+# This version : 4.6.1
 # Official website of the project : http://eventextender.gri.im
 
 #==============================================================================
@@ -2317,6 +2317,29 @@ class Game_Message
 end
 
 #==============================================================================
+# ** Window_Message
+#------------------------------------------------------------------------------
+#  This message window is used to display text.
+#==============================================================================
+
+class Window_Message
+  #--------------------------------------------------------------------------
+  # * Singleton
+  #--------------------------------------------------------------------------
+  class << self
+    attr_accessor :line_number
+    Window_Message.line_number = 4
+  end
+  #--------------------------------------------------------------------------
+  # * Get Number of Lines to Show
+  #--------------------------------------------------------------------------
+  def visible_line_number
+    Window_Message.line_number
+  end
+end
+
+
+#==============================================================================
 # ** Window_Base
 #------------------------------------------------------------------------------
 #  This is a super class of all windows within the game.
@@ -2864,6 +2887,13 @@ class Scene_Map
   def refresh_spriteset
     dispose_spriteset
     create_spriteset
+  end
+  #--------------------------------------------------------------------------
+  # * Refresh Windows
+  #--------------------------------------------------------------------------
+  def refresh_message
+    @message_window.dispose
+    @message_window = Window_Message.new
   end
   #--------------------------------------------------------------------------
   # * Frame Update
@@ -4510,6 +4540,14 @@ module Command
   def rtp_path
     RTP.path
   end
+  #--------------------------------------------------------------------------
+  # * Change Message height
+  #--------------------------------------------------------------------------
+  def message_height(n)
+    Window_Message.line_number = n
+    scene = SceneManager.scene
+    scene.refresh_message if scene.respond_to?(:refresh_message)
+  end
   
   #--------------------------------------------------------------------------
   # * Method suggestions
@@ -5553,5 +5591,11 @@ module Command_Description
   def rtp_path
     {description:"Renvoi le répertoire d'installation du RTP", 
     returnable: true}
+  end
+  def message_height
+    {description:"Change la hauteur des messages", 
+      args:[
+        {name:"Nombre de ligne", type: :int}
+        ]}
   end
 end
