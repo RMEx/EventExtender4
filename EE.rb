@@ -26,7 +26,7 @@
 # TI-MAX, Playm, Kmkzy
 #==============================================================================
 
-# This version : 4.6
+# This version : 4.6.2
 # Official website of the project : http://eventextender.gri.im
 
 #==============================================================================
@@ -1727,7 +1727,7 @@ module UI
       def update
         super
         return unless self.active
-        @text = @text[0...@text.length-1] || "" if UI::Keyboard.trigger?(:backspace)
+        @text = @text[0...@text.length-1] || "" if UI::Keyboard.repeat?(:backspace)
         @text << UI::Keyboard.letter
         self.value = @text
         if @old_text != @text
@@ -1777,7 +1777,7 @@ module UI
       def update
         super
         return unless self.active
-        @text = @text[0...@text.length-1] || "" if UI::Keyboard.trigger?(:backspace)
+        @text = @text[0...@text.length-1] || "" if UI::Keyboard.repeat?(:backspace)
         letter = UI::Keyboard.letter
         return if !["-","+","0","1","2","3","4","5", "6", "7", "8","9"].include?(letter)
         return if @text != "" && (letter == "+" || letter == "-")
@@ -2973,7 +2973,7 @@ class Game_Map
     event = map.events[event_id]
     return unless event
     event.id = new_id
-    @events[new_id] = Game_Event.new(@map_id, event)
+    @events.store(new_id, Game_Event.new(@map_id, event))
     x ||= event.x
     y ||= event.y
     @events[new_id].moveto(x, y)
