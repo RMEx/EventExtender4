@@ -3365,6 +3365,12 @@ module Command
   #--------------------------------------------------------------------------
   def max_event_id; $game_map.max_id; end
   #--------------------------------------------------------------------------
+  # * Get Tile ID from coords and layer (0,1,2)
+  #--------------------------------------------------------------------------
+  def tile_id(x, y, layer)
+    $game_map.tile_id(x, y, layer)
+  end
+  #--------------------------------------------------------------------------
   # * Get Region ID from coords
   #--------------------------------------------------------------------------
   def region_id(x, y)
@@ -4609,6 +4615,15 @@ module Command_Description
       args:[
          {name:"X", type: :int}, 
          {name:"Y", type: :int}
+      ],
+      returnable: true}
+  end
+  def tile_id
+    {description:"Renvoi l'id de terrain de la case passée en parametre'",
+      args:[
+         {name:"X", type: :int}, 
+         {name:"Y", type: :int},
+         {name:"Couche", type: :int}
       ],
       returnable: true}
   end
