@@ -3377,6 +3377,15 @@ module Command
     $game_map.terrain_tag(x, y)
   end
   #--------------------------------------------------------------------------
+  # * Get Event Id form coords
+  #--------------------------------------------------------------------------
+  def id_at(x, y)
+    result = $game_map.id_xy(x, y)
+    return result if result > 0
+    return 0 if $game_player.x == x && $game_player.y == y
+    return -1
+  end
+  #--------------------------------------------------------------------------
   # * Get Region ID from coords
   #--------------------------------------------------------------------------
   def region_id(x, y)
@@ -4624,6 +4633,7 @@ module Command_Description
       ],
       returnable: true}
   end
+
   def terrain_tag
     {description:"Renvoi le ta de terrain défini sur les coordonnées passées en argument",
       args:[
@@ -4632,8 +4642,16 @@ module Command_Description
       ],
       returnable: true}
   end
-  def tile_id
-    {description:"Renvoi l'id de terrain de la case passée en parametre'",
+  def terrain_tag
+    {description:"Renvoi le ta de terrain défini sur les coordonnées passées en argument",
+      args:[
+         {name:"X", type: :int}, 
+         {name:"Y", type: :int}
+      ],
+      returnable: true}
+  end
+  def id_at
+    {description:"Renvoi l'id de l'évènement à la position donnée. -1 s'il ny en a pas",
       args:[
          {name:"X", type: :int}, 
          {name:"Y", type: :int},
