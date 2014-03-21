@@ -26,7 +26,7 @@
 # TI-MAX, Playm, Kmkzy
 #==============================================================================
 
-# This version : 4.6.2
+# This version : 4.6.3
 # Official website of the project : http://eventextender.gri.im
 
 #==============================================================================
@@ -3371,6 +3371,12 @@ module Command
     $game_map.tile_id(x, y, layer)
   end
   #--------------------------------------------------------------------------
+  # * Get terrain Tag from coords
+  #--------------------------------------------------------------------------
+  def terrain_tag(x, y)
+    $game_map.terrain_tag(x, y)
+  end
+  #--------------------------------------------------------------------------
   # * Get Region ID from coords
   #--------------------------------------------------------------------------
   def region_id(x, y)
@@ -4612,6 +4618,14 @@ module Command_Description
   end
   def region_id
     {description:"Renvoi la région défini sur les coordonnées passées en argument",
+      args:[
+         {name:"X", type: :int}, 
+         {name:"Y", type: :int}
+      ],
+      returnable: true}
+  end
+  def terrain_tag
+    {description:"Renvoi le ta de terrain défini sur les coordonnées passées en argument",
       args:[
          {name:"X", type: :int}, 
          {name:"Y", type: :int}
