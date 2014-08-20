@@ -1,10 +1,11 @@
 #Event Extender 4 (Pour VXAce)
 
 ##Mises à jours
-Liste des mises à jours de l'EE4 (version actuelle `4.6`)
+Liste des mises à jours de l'EE4 (version actuelle `4.6.4`)
 
 | Version N°  | Date |  Modification |
 ------------- | ------------- | ------------- |
+| `4.6.3` | `20.08.2014`  | Correction save_exists? (merci à Falconpilote) |
 | `4.6.3` | `21.03.2014`  | Ajout de terrain_tag et de id_at |
 | `4.6.2` | `20.03.2014`  | Ajout de tile_id |
 | `4.6.2` | `11.03.2014`  | Modification des champs de textes |
