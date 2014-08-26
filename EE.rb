@@ -4293,7 +4293,7 @@ module Command
   #--------------------------------------------------------------------------
   # * Check if save exists
   #--------------------------------------------------------------------------
-  def save_exists?(index);  File.exists?(DataManager.make_filename(index)); end
+  def save_exists?(index);  File.exists?(DataManager.make_filename(index-1)); end
   #--------------------------------------------------------------------------
   # * Erase save
   #--------------------------------------------------------------------------
